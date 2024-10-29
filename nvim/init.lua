@@ -9,5 +9,3 @@ require("plugins")
 
 -- Load colorscheme
 require("colorscheme")
-
-
