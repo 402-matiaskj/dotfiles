@@ -16,7 +16,7 @@ nmap(" ", "<Nop>")
 vim.g.mapleader = " "
 
 -- Exit insert mode with ii
-imap("ii", "<ESC>")
+imap("jj", "<ESC>")
 
 -- Arrowkeys are for scrubs
 nmap("<Up>", "<NOP>")
