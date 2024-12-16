@@ -30,7 +30,7 @@ packer.startup(function(use)
 	-- Better syntax highlighting, and some other features like autoclose html
 	-- tags
 	use({
-		"nvim-treesitter/nvim-treesitter",
+		"gvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
 
@@ -85,9 +85,6 @@ packer.startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
-
-	-- Gruvbox theme
-	use({ "ellisonleao/gruvbox.nvim" })
 
 	if Packer_Bootstrap then
 		require("packer").sync()
