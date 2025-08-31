@@ -1,6 +1,10 @@
 local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 
+-- Trun off diagnostics as we are using lsp for that
+vim.g.go_diagnostics_level = 0
+--vim.g.go_gopls_enabled = 0
+
 -- keybinds for godebug
 keymap("n", "<leader>S", "<Cmd>GoDebugStart<CR>", default_opts)
 keymap("n", "<leader>n", "<Cmd>GoDebugNext<CR>", default_opts)
