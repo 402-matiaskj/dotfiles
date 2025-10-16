@@ -11,7 +11,7 @@ return {
 
     {
         "scottmckendry/cyberdream.nvim",
-        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        lazy = false,    -- make sure we load this during startup if it is your main colorscheme
         priority = 1000, -- make sure to load this before all the other start plugins
         config = function()
             -- load the colorscheme here
@@ -28,46 +28,6 @@ return {
     {
         "fatih/vim-go",
         ft = "go",
-    },
-    {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "MunifTanjim/nui.nvim",
-            "nvim-tree/nvim-web-devicons", -- optional, but recommended
-        },
-        lazy = false,             -- neo-tree will lazily load itself
-    },
-    {
-        "GeorgesAlkhouri/nvim-aider",
-        cmd = "Aider",
-        -- Example key mappings for common actions:
-        keys = {
-            { "<leader>a/", "<cmd>Aider toggle<cr>",       desc = "Toggle Aider" },
-            {
-                "<leader>as",
-                "<cmd>Aider send<cr>",
-                desc = "Send to Aider",
-                mode = { "n", "v" },
-            },
-            { "<leader>ac", "<cmd>Aider command<cr>",      desc = "Aider Commands" },
-            { "<leader>ab", "<cmd>Aider buffer<cr>",       desc = "Send Buffer" },
-            { "<leader>a+", "<cmd>Aider add<cr>",          desc = "Add File" },
-            { "<leader>a-", "<cmd>Aider drop<cr>",         desc = "Drop File" },
-            { "<leader>ar", "<cmd>Aider add readonly<cr>", desc = "Add Read-Only" },
-            { "<leader>aR", "<cmd>Aider reset<cr>",        desc = "Reset Session" },
-            -- Example nvim-tree.lua integration if needed
-            { "<leader>a+", "<cmd>AiderTreeAddFile<cr>",   desc = "Add File from Tree to Aider",    ft = "NvimTree" },
-            { "<leader>a-", "<cmd>AiderTreeDropFile<cr>",  desc = "Drop File from Tree from Aider", ft = "NvimTree" },
-        },
-        dependencies = {
-            "folke/snacks.nvim",
-            --- The below dependencies are optional
-            "catppuccin/nvim",
-            "nvim-tree/nvim-tree.lua",
-        },
-        config = true,
     },
     {
         "folke/trouble.nvim",
