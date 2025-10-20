@@ -1,7 +1,7 @@
 #! /bin/bash
 
 ## installs version 0.9.5 of nvim into /home/$user/bin
-nvim_version="v0.9.5"
+nvim_version="v0.11.3"
 nvim_tarball="https://github.com/neovim/neovim/releases/download/$nvim_version/nvim-linux64.tar.gz"
 
 install_nvim() {
