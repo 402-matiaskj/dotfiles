@@ -8,4 +8,23 @@ return {
 			vim.cmd([[colorscheme cyberdream]])
 		end,
 	},
+	{
+		"mfussenegger/nvim-dap",
+		config = function()
+			require("config.dap").setup()
+		end,
+	},
+	{
+		"leoluz/nvim-dap-go",
+		opts = function()
+			require("dap-go").setup()
+		end,
+	},
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = {
+			"mfussenegger/nvim-dap",
+			"nvim-neotest/nvim-nio",
+		},
+	},
 }
