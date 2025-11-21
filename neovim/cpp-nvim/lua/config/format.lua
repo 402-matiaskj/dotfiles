@@ -22,13 +22,18 @@ return {
 					"goimports-reviser", -- groups imports based on type
 					"gofmt", -- code
 				},
+
+				-- markdown --
+				md = {
+					"markdownlint",
+				},
 			},
 
 			-- autocmd --
 			-- format on save --
 			-- using BufWritePost instead of BufWritePre allows us
 			-- to format asynchronously.
-			vim.api.nvim_create_autocmd("BufWritePost", {
+			vim.api.nvim_create_autocmd("BufWritePre", {
 				pattern = "*",
 				callback = function(args)
 					format.format({ async = true, bufnr = args.buf })
