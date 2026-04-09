@@ -10,17 +10,19 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- Get default capabilities
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-
--- For golang we need to set this to true so that when we import a package that
--- we havent donwloaded with go get, we don't have to restart vim to get rid of
--- the import error.
-capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
-
-vim.lsp.config("gopls", {
-	capabilities = capabilities,
-})
+--local capabilities = vim.lsp.protocol.make_client_capabilities()
+--
+---- For golang we need to set this to true so that when we import a package that
+---- we havent donwloaded with go get, we don't have to restart vim to get rid of
+---- the import error.
+--capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
+--
+--vim.lsp.config("gopls", {
+--	capabilities = capabilities,
+--})
 
 -- enable lsps --
 vim.lsp.enable("clangd")
 vim.lsp.enable("gopls")
+vim.lsp.enable("yaml-language-server")
+vim.lsp.enable("helm-ls")

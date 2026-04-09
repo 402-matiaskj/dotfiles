@@ -27,6 +27,12 @@ return {
 				md = {
 					"markdownlint",
 				},
+
+				-- yaml --
+				--yaml = { "yamlfmt" },
+
+				-- helm --
+				helm = { "helm-ls" },
 			},
 
 			-- autocmd --
@@ -36,7 +42,7 @@ return {
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				pattern = "*",
 				callback = function(args)
-					format.format({bufnr = args.buf })
+					format.format({ bufnr = args.buf })
 				end,
 			}),
 		})
